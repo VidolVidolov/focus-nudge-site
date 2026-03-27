@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Nudge — Gentle focus reminders for Chrome</title>
+  <meta name="description" content="A Chrome extension that gently nudges you back to focus when you're on distracting sites. Not a blocker — a mindful reminder." />
+  <meta property="og:title" content="Focus Nudge" />
+  <meta property="og:description" content="Gentle focus nudges when you're on distracting sites. Track your streak. Stay in flow." />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --card: #1a1a1a;
+      --green: #1db954;
+      --green-lt: #1ed760;
+      --white: #ffffff;
+      --white-70: rgba(255,255,255,0.7);
+      --white-50: rgba(255,255,255,0.5);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 100px 24px 80px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--green), var(--green-lt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--white-70);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .cta {
+      display: inline-block;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, var(--green), var(--green-lt));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(29,185,84,0.3);
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(29,185,84,0.4);
+    }
+    .cta-sub {
+      display: block;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--white-50);
+    }
+
+    /* Features */
+    .features {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid rgba(29,185,84,0.1);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .feature-card:hover {
+      border-color: rgba(29,185,84,0.3);
+      transform: translateY(-4px);
+    }
+    .feature-card .emoji {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .feature-card p {
+      color: var(--white-70);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* How it works */
+    .how {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+      text-align: center;
+    }
+    .how h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-lt);
+      margin-bottom: 48px;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      text-align: left;
+    }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--green-lt));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .step-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      color: var(--white-70);
+      font-size: 0.95rem;
+    }
+
+    /* Screenshot */
+    .screenshot-section {
+      text-align: center;
+      padding: 40px 24px 80px;
+    }
+    .screenshot-section img {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(29,185,84,0.15);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      text-align: center;
+      padding: 80px 24px 100px;
+    }
+    .footer-cta h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-lt);
+      margin-bottom: 16px;
+    }
+    .footer-cta p {
+      color: var(--white-70);
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--white-50);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 60px 20px 50px; }
+      .features { grid-template-columns: 1fr; padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Focus Nudge</h1>
+    <p>A gentle Chrome extension that nudges you back to focus when you've been scrolling too long. Not a blocker — a mindful reminder.</p>
+    <!-- Replace # with your Chrome Web Store URL -->
+    <a href="#" class="cta">Add to Chrome — Free</a>
+    <span class="cta-sub">Free tier tracks 2 sites. Unlock all sites &amp; custom intervals for $1.99 one-time.</span>
+  </section>
+
+  <section class="screenshot-section">
+    <img src="store-assets/screenshot-2-overlay.png" alt="Focus Nudge overlay appearing on YouTube" />
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <span class="emoji">👀</span>
+      <h3>Gentle Nudges</h3>
+      <p>Not a blocker — a calm, full-screen reminder that it's time to refocus. Acknowledge it and move on.</p>
+    </div>
+    <div class="feature-card">
+      <span class="emoji">🎯</span>
+      <h3>Pick Your Sites</h3>
+      <p>Choose exactly which sites to track: Instagram, YouTube, Twitter/X, Reddit, TikTok, Facebook.</p>
+    </div>
+    <div class="feature-card">
+      <span class="emoji">🔥</span>
+      <h3>Streak Counter</h3>
+      <p>Every nudge you acknowledge builds your streak. Gamify your focus and build the habit.</p>
+    </div>
+    <div class="feature-card">
+      <span class="emoji">⏸️</span>
+      <h3>Smart Pausing</h3>
+      <p>Timer only runs when you're actually on a tracked site. Switch tabs and it pauses automatically.</p>
+    </div>
+    <div class="feature-card">
+      <span class="emoji">😴</span>
+      <h3>Snooze</h3>
+      <p>Not ready to leave? Snooze for 1 minute. The nudge will come back — gently.</p>
+    </div>
+    <div class="feature-card">
+      <span class="emoji">⚡</span>
+      <h3>Lightweight &amp; Private</h3>
+      <p>No accounts, no cloud, no tracking. Everything stays in your browser. Under 200KB total.</p>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Install &amp; pick your sites</h3>
+          <p>Add Focus Nudge from the Chrome Web Store. Open the popup and check the sites you want to monitor.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Set your interval</h3>
+          <p>Choose how often you want to be nudged — 5 minutes, 10, 30, whatever fits your workflow.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Browse normally</h3>
+          <p>When the timer fires on a tracked site, a calm overlay appears. Close the tab or snooze — your choice.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Watch your streak grow</h3>
+          <p>Every nudge acknowledged adds to your streak. Build the habit of mindful browsing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <h2>Ready to take back your focus?</h2>
+    <p>Join thousands of people building better browsing habits.</p>
+    <a href="#" class="cta">Add to Chrome — Free</a>
+    <span class="cta-sub">Upgrade to Pro for $1.99 one-time via Gumroad.</span>
+  </section>
+
+  <footer>
+    Focus Nudge &copy; 2026. Free to use, Pro upgrade available. No data leaves your browser.
+  </footer>
+
+</body>
+</html>
