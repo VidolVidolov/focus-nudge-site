@@ -4,295 +4,438 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Focus Nudge — Gentle focus reminders for Chrome</title>
-  <meta name="description" content="A Chrome extension that gently nudges you back to focus when you're on distracting sites. Not a blocker — a mindful reminder." />
-  <meta property="og:title" content="Focus Nudge" />
-  <meta property="og:description" content="Gentle focus nudges when you're on distracting sites. Track your streak. Stay in flow." />
+  <meta name="description" content="Not a blocker — a nudge. A Chrome extension that gently reminds you to get back to work when you've been doomscrolling too long. Smart timer, streaks, stats. Free + Pro." />
+  <meta property="og:title" content="Focus Nudge — Break the doomscroll" />
+  <meta property="og:description" content="Gentle full-screen reminders when you've been scrolling too long. Smart timer, streaks & stats. Not a blocker — a nudge." />
   <meta property="og:type" content="website" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg: #0a0a0a;
-      --card: #1a1a1a;
+      --card: #141414;
       --green: #1db954;
       --green-lt: #1ed760;
-      --white: #ffffff;
-      --white-70: rgba(255,255,255,0.7);
-      --white-50: rgba(255,255,255,0.5);
-    }
+      --green-dk: #148f3f;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="v5,<html lang="enwh<head>
+  <meta 5,  <me55  <meta name="viewport" crg  <title>Focus Nudge — Gentle focus reminders for Chrome</title>
+  <met B  <meta name="description" content="Not a blocker — a nudge. A ro  <meta property="og:title" content="Focus Nudge — Break the doomscroll" />
+  <meta property="og:description" content="Gentle full-screen reminders when you've been scrolling too long. Smart timer, streaks & in  <meta property="og:description" content="Gentle full-screen reminders when 1  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--white);
+    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftition: fixed;
+      bord
+    :root {
+      --bg: #0a0a0a;
+      --card: #14inter-events: none;
+      z-      --bg        --card:: float 20s ease-in-out infinit       }
+    .orb-1 { wi      --green-dk: #148f3f; <!DOCTound: rgba(29,185,84,<html lang="en00<head>
+  <meta x;  <meat  <meta name="v5,<html la-2  <meta 5,  <me55  <meta name="viewporou  <met B  <meta name.05); bottom: -150px; right: -50px; animation-delay: -7s; }
+    .orb-3 { width: 300px; heig  <meta property="og:description" content="Gentle full-screen reminders when you've been scrolling too long. Smart timer, streaks & in  <meta property=e(  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftition: fixed;
+      bord
+    :root {
+      --bg: #0a0a0a;
+       transition: opacity 0.7s ease, transform 0.7s eas
+    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftition: f se      --bgsi    *, *::before, *::aftition
+
+      bord
+    :root {
+      --bg: #;
+    :rootdi      --bg24      --card: #14inwi      z-      --bg        --card::       .orb-1 { wi      --green-dk: #148f3f; <!DOCTound: rgba(29,185,84,<hte  <meta x;  <meat  <meta name="v5,<html la-2  <meta 5,  <me55  <meta name="viewporou  <met18    .orb-3 { width: 300px; heig  <meta property="og:description" content="Gentle full-screen reminders when you've been scrolling too long. Smart timer, streaks &8p    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0and  <style>
+      background: linear-gradient(135deg, var(--green), var(--green-lt))
+    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftition: fare      --bgba    *, *::before, *::aftitionrg      bord
+    :root {
+      --bg: #g:    :root        --bgei     1.05;
+    }
+        :root {
+      --bg: #0a0a0and  <style>
+    *, *::behi      --bg      *, *::before, *::aftitiongi
+    auto 44px;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 100px 24px 80px;
-      max-width: 720px;
-      margin: 0 auto;
+    .hero p strong { color: var(    :root f      --bg:     :rootdi  ta
+    :root {
+      --bg: #0a0a0and  <style>
+      background: linear-gradient(135deg, var(--green), var(--green-lt))
+    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftition: fare      --bgba    *, *::before, *::aftitionrg      bord
+    :root {
+      --bg: #g:    :root        --bgei     1.05;
     }
-    .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--green), var(--green-lt));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+        :root {
+      --bg: #0a0a0and  <style>
+    *, *::behi      --bg      *, *::before, *::aftitiongi
+    auto 44px;
+      line-height: 1.6;
     }
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--white-70);
-      max-width: 520px;
-      margin: 0 auto 40px;
+    .hero p strong { tr      --bgra      background: linear-grad      :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftitiot-      --bgre    *, *::before, *::aftition
+     :root {
+      --bg: #g:    :root        --bgei     1.05;
     }
-    .cta {
-      display: inline-block;
-      padding: 16px 40px;
-      background: linear-gradient(135deg, var(--green), var(--green-lt));
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.1rem;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(29,185,84,0.3);
+        :root {
+    80      --bgte    }
+    center;
     }
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(29,185,84,0.4);
+    .promo-banner img {
+      width: 100%;
+        *, *::behi      --bg     bo    auto 44px;
+      line-height: 1.6;
     }
-    .cta-sub {
-      display: block;
-      margin-top: 14px;
-      font-size: 0.85rem;
-      color: var(--white-50);
+    .hero p0       line-gba(    }
+    .hero p strorg    55    :root {
+      --bg: #0a0a0and  <style>
+      background: linear-gns      --bgea      background: linear-grad }    :root {
+      --bg: #0a0a0and  <style>
+    *, *::before, *::aftitio1.      --bg b    *, *::before, *::aftition0,    :root {
+      --bg: #g:    :root        --bgei     1.05;
     }
-
-    /* Features */
-    .features {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 60px 24px 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+        :root {
+    .f      --bg      }
+        :root {
+      --bg: #0a0a0and  <s      dd      --bg: #0;
+    *, *::behi      --bg     id    auto 44px;
+      line-height: 1.6;
     }
-    .feature-card {
-      background: var(--card);
-      border: 1px solid rgba(29,185,84,0.1);
-      border-radius: 16px;
-      padding: 36px 28px;
-      text-align: center;
-      transition: border-color 0.3s, transform 0.3s;
+    .hero p}
+      line-heca    }
+     background: v    -c     
+      border: 1px solid var(--white-10);
+      border-radius: 20px;
+        *, *::before, *::aftitiot       :root {
+      --bg: #g:    :root        --bgei     1.05;
     }
-    .feature-card:hover {
-      border-color: rgba(29,185,84,0.3);
-      transform: translateY(-4px);
+  0.     box-shad    }
+        :root {
+    80      --bgte    }
+ lo    id    80      -- .    center;
     }
-    .feature-card .emoji {
-      font-size: 2.4rem;
-      margin-bottom: 16px;
-      display: block;
+    
+     }
+    nt    ;
+      width: 100%;
+   te        *, *::behef      line-height: 1.6;
     }
-    .feature-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-      font-weight: 700;
+    .hero p0      un    }
+    .hero p0    eg    an    .hero p strorg    55    :roont      --bg: #0a0a0and  <style>
+   io      background: linear-gns fe      --bg: #0a0a0and  <style>
+    *, *::before, *::aftitio1.      --bg b    *, *ns    *, *::before, *::aftitio1:       --bg: #g:    :root        --bgei     1.05;
     }
-    .feature-card p {
-      color: var(--white-70);
-      font-size: 0.95rem;
-      line-height: 1.5;
+        :root {
+    .f      :h    }
+        :root {
+     }
+    .feature-card .e     {    .f      --6r        :root {
+      x;      --bg: #0k;    *, *::behi      --bg     id    auto 44px;
+ ar      line-height: 1.6;
     }
-
-    /* How it works */
-    .how {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 60px 24px 80px;
-      text-align: center;
+    .hero p}
+ ea    }
+    .hero p}
+   ar    hi      line-t-     background: v -h      border: 1px solid var(        border-radius: 20px;
+        *, *to        *, *::before, *::x;      --bg: #g:    :root ;
     }
     .how h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--green-lt);
-      margin-bottom: 48px;
+     }
+  0.     box-shad    }
+        :root {
+  
+   0. b        :root {
+    8di    835deg, var( lo    id    80      -lt    }
+    
+     }
+    nt    ;
+     te          -    nt-     fill-co   te        *, *
+     }
+    .hero p0      un    }
+    .hero p0  m:    x;    .hero p0    eg    anla   io      background: linear-gns fe      --bg: #0a0a0and  <style>
+    *, *::before, *:ex    *, *::before, *::aftitio1.      --bg b    *, *ns    *, *::befx-    }
+        :root {
+    .f      :h    }
+        :root {
+     }
+    .feature-card .e     {    .f      --6r        :root {
+      x--    n-    .f      :hsp        :root {
+  te     }
+    .fest    .on      x;      --bg: #0k;    *, *::behi      --bg     id ;
+ ar      line-height: 1.6;
     }
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      text-align: left;
-    }
-    .step {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-    .step-num {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--green-lt));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.1rem;
-    }
-    .step-content h3 {
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-    }
-    .step-content p {
-      color: var(--white-70);
-      font-size: 0.95rem;
-    }
+    .hero p}
+ ea    }
+    .hero p}
+on    }
+    .hero p}
+ ea   re    ar ea    }
+   6    .he     ar    hien        *, *to        *, *::before, *::x; .95rem; }
 
-    /* Screenshot */
-    .screenshot-section {
-      text-align: center;
-      padding: 40px 24px 80px;
+    .pricing {
+      max-width: 800px;
+      marg    }
+    .how h2 {
+     }
+  0.     box-shad    }
+        :root {
+             }
+  0. {
+  0.  f        :root {
+  
+      
+   0. b    80 ;
+    8di    835deg, vaea    
+     }
+    nt    ;
+     te          -    nt-        -webkit-     te   -c     }
+    .hero p0      un    }
+    .hero p0  m:   t;
+    . b    .hero p0  m:    x;        *, *::before, *:ex    *, *::before, *::aftitio1.      --bg b    *, *ns    *, *::befx-    }
+        :root {
+  .p        :root {
+    .f      :h    }
+        :root {
+     }
+    .feature-card .e     {    .f  or    .f      :hpx        :root {
+  0p     }
+    .fete    .ig      x--    n-    .f      :hsp        }
+    .pricing-card  te     }
+    .fest    .on      x;      --bg);    .festx- ar      line-height: 1.6;
     }
-    .screenshot-section img {
-      max-width: 900px;
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(29,185,84,0.15);
-      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
-    }
+    .hero p}
+ ea    }
+    .hero p}
+on  e     }
+    .hero p}
+ ea   ;     -w ea    }
+  
+      coloon    }
+   ite-50);
+  ea   re   ra   6    .he     ar lett
+    .pricing {
+      max-width: 800px;
+      marg    }
+    .how h2 {
+     }-na      max-widar      marg    }
+    icin    .how h2 {
+{      }
+  0. .4rem; fo        :root {
+     n-             }}
+  0. {
+  0.  card .pri  
+      
+   0. b    1r m; font-w    8di    835lo     }
+    nt    ;
+     te.p    ng-     te   li    .hero p0      un    }
+    .hero p0  m:   t;
+    . b   :     .hero p0.pricing-card     . b    .hero p0 :         :root {
+  .p        :root {
+    .f      :h    }
+        :root {
+     }
+    .feature-card .e     {    .f  or    .f     en  .p        :rsi    .f      :h    ft        :root {
+  va     }
+    .fent    .ht  0p     }
+    .fete    .ig      x--    n-    .f      :hsp        0p    .fete 2    .pricing-card  te     }
+    .fest    .on      x;   e)    .fest    .on      x;   f    }
+    .hero p}
+ ea    }
+    .hero p}
+on  e     }
+    .hero p}
+ ea   xt-trans ea    }
+  ca    .heteon  e     }0.    .hero 
 
-    /* Footer CTA */
-    .footer-cta {
-      text-align: center;
-      padding: 80px 24px 100px;
-    }
-    .footer-cta h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--green-lt);
-      margin-bottom: 16px;
-    }
-    .footer-cta p {
-      color: var(--white-70);
-      margin-bottom: 32px;
-      font-size: 1.1rem;
-    }
+ ea   ;    -c  
+      coloon    }
+:  en   ite-50);
+  eang  ea   re px    .pricing {
+      max-width: 800p        max-wid-c      marg    }
+    .hte    .how h2 {
+po     }-na   lu    icin    .how h2 {
+{      }
+  0. .4ns{      }
+  0. .4rem;%)  0. .4 w     n-             }}
+  0.     0. {
+  0.  card .prl-  0. en      
+   0. b  9,   0.4,    nt    ;
+     te.p    ng-     te   li    en     te.p       .hero p0  m:   t;
+    . b   :     .hero p0.pricint    . b   :     .herba  .p        :root {
+    .f      :h    }
+        :root {
+     }
+    .featureb    .f      :h    p:        :root {
+  it     }
+    .feor: trans  va     }
+    .fent    .ht  0p     }
+    .fete    .ig      x--    n-    .f      :hsp        0p    or    .fenthi    .fete    .ig      x--om    .fest    .on      x;   e)    .fest    .on      x;   f    }
+    .hero p}
+ ea    }
+    .herot:    .hero p}
+ ea    }
+    .hero p}
+on  e     }
+    .hero p}
+ dd ea    }
+        .heoron  e     }te    .hero    ea   xt-tr0.  ca    .heteon  e   op
+ ea   ;    -c  
+      coloon    }
+         coloon  lo:  en   ite-50); t  eang  ea   re n      max-width: 800p        mat-    .hte    .how h2 {
+po
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 24px;
-      color: var(--white-50);
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
+    @media (max-width: 768pxpo     }-na   lu    dd{      }
+  0. .4ns{      }
+  0. .4rees  0. .4-t  0. .4rem;%)  0 1  0.     0. {
+  0.  card .prl-  0. en      id  0.  card .la   0. b  9,   0.4,    nt    om     te.p    ng-     te   li0p    . b   :     .hero p0.pricint    . b   :     .herba  .p        iv    .f      :h    }
+        :root {
+     }
+    .featureb    .f      :h  ct        :root {
+  de     }
+    .fe class="h  it     }
+    .feor: trans  va     }
+    .fentck    .feor
+     .fent    .ht  0p    oll    .fete    .ig  opened In    .hero p}
+ ea    }
+    .herot:    .hero p}
+ ea    }
+    .hero p}
+on  e     }
+    .hero p}
+ dd ea    }
+        .heoron  e     }te    .hero be doing something else ea    }
+  di    .he=" ea    }
+    .hero p}
+re    .helaon  e     }d     .hero ?dd ea    }          .hcl ea   ;    -c  
+      coloon    }
+         coloon  lo:  en   ite-50); t  9       coloon  >
+         coloon ecpo
 
-    @media (max-width: 640px) {
-      .hero { padding: 60px 20px 50px; }
-      .features { grid-template-columns: 1fr; padding: 40px 20px; }
-    }
-  </style>
-</head>
-<body>
+    @media (max-width: 768pxpo     }-na   lu    dd{      }
+  0. .4ns{      }
+  0. .4rees  0. .4-t  0. .cu
+ Nu  0. .4ns{      }
+  0. .4rees  0. .4-t  0. .4rem;%)  0 1 ti  0. .4rees  0. es  0.  card .prl-  0. en      id  0.  card .la   0.pa        :root {
+     }
+    .featureb    .f      :h  ct        :root {
+  de     }
+    .fe class="h  it     }
+    .feor: trans  va     }
+    .fentck    .feor
+     .fent    .ht  0p    oll    .fe</     }
+    .fecl    .fe  de     }
+    .fe class="h  it     }
+    .fe">    .fe cpa    .feor: trans  va     /h    .fentck    .feor
+    y      .fent    .ht  es ea    }
+    .herot:    .hero p}
+ ea    }
+    .hero p}
+on  e     }tt    .he n ea    }
+    .hero p}
+</    .he  on  e     }"f    .hero d  dd ea    }          .hla  di    .he=" ea    }
+    .hero p}
+re    .helaon  e     }d     .hep>    .hero p}
+re    .gore    .heland      coloon    }
+         coloon  lo:  en   ite-50); t  9       coloon  >
+ou         coloon  <         coloon ecpo
 
-  <section class="hero">
-    <h1>Focus Nudge</h1>
-    <p>A gentle Chrome extension that nudges you back to focus when you've been scrolling too long. Not a blocker — a mindful reminder.</p>
-    <!-- Replace # with your Chrome Web Store URL -->
-    <a href="#" class="cta">Add to Chrome — Free</a>
-    <span class="cta-sub">Free tier tracks 2 sites. Unlock all sites &amp; custom intervals for $1.99 one-time.</span>
-  </section>
-
-  <section class="screenshot-section">
-    <img src="store-assets/screenshot-2-overlay.png" alt="Focus Nudge overlay appearing on YouTube" />
-  </section>
-
-  <section class="features">
-    <div class="feature-card">
-      <span class="emoji">👀</span>
-      <h3>Gentle Nudges</h3>
-      <p>Not a blocker — a calm, full-screen reminder that it's time to refocus. Acknowledge it and move on.</p>
-    </div>
-    <div class="feature-card">
-      <span class="emoji">🎯</span>
-      <h3>Pick Your Sites</h3>
-      <p>Choose exactly which sites to track: Instagram, YouTube, Twitter/X, Reddit, TikTok, Facebook.</p>
-    </div>
-    <div class="feature-card">
-      <span class="emoji">🔥</span>
+    @media (max-width: 768pxpo   n 
+    @media (max-wi/sp  >
       <h3>Streak Counter</h3>
-      <p>Every nudge you acknowledge builds your streak. Gamify your focus and build the habit.</p>
-    </div>
-    <div class="feature-card">
-      <span class="emoji">⏸️</span>
-      <h3>Smart Pausing</h3>
-      <p>Timer only runs when you're actually on a tracked site. Switch tabs and it pauses automatically.</p>
-    </div>
-    <div class="feature-card">
-      <span class="emoji">😴</span>
-      <h3>Snooze</h3>
-      <p>Not ready to leave? Snooze for 1 minute. The nudge will come back — gently.</p>
-    </div>
-    <div class="feature-card">
-      <span class="emoji">⚡</span>
-      <h3>Lightweight &amp; Private</h3>
-      <p>No accounts, no cloud, no tracking. Everything stays in your browser. Under 200KB total.</p>
-    </div>
-  </section>
+      <p>Every nudge you   0. .4rees  0. ds Nu  0. .4ns{      }
+  0. .th  0. .4rees  0. .4-       }
+    .featureb    .f      :h  ct        :root {
+  de     }
+    .fe class="h  it     }
+    .feor: trans  va     }
+    .f>I    .ra  de     }
+    .fe classeddit, TikTok, Facebook    .fe cdd    .feor: trans  va     ro    .fentck    .feor
+     c     .fent    .ht  fa    .fecl    .fe  de     }
+    .fe class="n>    .fe class="h  it     va    .fe">    .fe cpa    .nt    y      .fent    .ht  es ea    }
+    .herot:    .hero p}
+ ea    U    .herot:    .hero p}
+ ea    }
+  < ea    }
+    .hero p}
+cl    .hew on  e     }   <h2>How it works</h2>
+    <div</lass="steps    .hero p}
+re    .helaon  e       <div class="step-num">1</div>
+        <div clasre    .hcontere    .gore    .heland      coloon    }
+    it         coloon  lo:  en   ite-50); t roou         coloon  <         coloon ecpo
 
-  <section class="how">
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h3>Install &amp; pick your sites</h3>
-          <p>Add Focus Nudge from the Chrome Web Store. Open the popup and check the sites you want to monitor.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h3>Set your interval</h3>
-          <p>Choose how often you want to be nudged — 5 minutes, 10, 30, whatever fits your workflow.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h3>Browse normally</h3>
-          <p>When the timer fires on a tracked site, a calm overlay appears. Close the tab or snooze — your choice.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h3>Watch your streak grow</h3>
-          <p>Every nudge acknowledged adds to your streak. Build the habit of mindful browsing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="footer-cta">
-    <h2>Ready to take back your focus?</h2>
-    <p>Join thousands of people building better browsing habits.</p>
-    <a href="#" class="cta">Add to Chrome — Free</a>
-    <span class="cta-sub">Upgrade to Pro for $1.99 one-time via Gumroad.</span>
-  </section>
-
-  <footer>
-    Focus Nudge &copy; 2026. Free to use, Pro upgrade available. No data leaves your browser.
-  </footer>
-
+    @media (mac
+    @media (max-width: 768pxpo   n 
+    <    @media (max-wi/sp  >
+      <h3ss      <h3>Streak Counte        <p>Every nudge you   0>
+  0. .th  0. .4rees  0. .4-       }
+    .featureb    .f      : 1    .featureb    .f      :h  ct   s   de     }
+    .fe class="h  it     }
+    .fe
+     .fe cdi    .feor: trans  va     v     .f>I    .ra  de     }v     .fe classeddit, TikT
+      c     .fent    .ht  fa    .fecl    .fe  de     }
+    .fe class="n>        <p>When the time    .fe class="n>    .fe class="h  it     va    .fe"lo    .herot:    .hero p}
+ ea    U    .herot:    .hero p}
+ ea    }
+  < ea    }
+    .hero p}
+cl    .hew on  cl ea    U    .herot:   
+  ea    }
+  < ea    }
+    .herot"  < ea       .hero chcl    .hew  g    <div</lass="steps    .hero p}
+re    .helae re    .helaon  e       <div clasd.        <div clasre    .hcontere    .gore    .helan/d    it         coloon  lo:  en   ite-50); t roou         coloon  <  fa
+    @media (mac
+    @media (max-width: 768pxpo   n 
+    <    @media (max-wi/sp  >
+  pri    @media (        <    @media (max-wi/sp  >
+    iv      <h3ss      <h3>Streak >$  0. .th  0. .4rees  0. .4-       }
+    .featureb    .f      : 1uT    .featureb    .f <li>10-minute fi    .fe class="h  it     }
+    .fe
+     .fe cdi    .feor: trans  va     vnl    .fe
+ dges &amp; streaks     .        c     .fent    .ht  fa    .fecl    .fe  de     }
+    .fe class="n>        <p>When tdg    .fe class="n>        <p>When the time    .fe clase" ea    U    .herot:    .hero p}
+ ea    }
+  < ea    }
+    .hero p}
+cl    .hew on  cl ea    U    .herot:   
+  ea    }
+  7 ea    }
+  < ea    }
+    .hero <  < ea an    .hero omcl    .hew     ea    }
+  < ea    }
+    .herot"  < ei>  < ea       i>Lifetimre    .helae re    .helaon  e       <div clasd.        <div clasre    .hconte</    @media (mac
+    @media (max-width: 768pxpo   n 
+    <    @media (max-wi/sp  >
+  pri    @media (        <    @media (max-wi/sp  >
+    iv      <h3ss      <h3>Streak >$t     @media (may.    <    @media (max-wi/sp  >
+  priv  pri    @media (        <   h    iv      <h3ss      <h3>Streak >$  0. .th  0.       .featureb    .f      : 1uT    .featureb    .f <li>10-minute fi    pt    .fe
+     .fe cdi    .feor: trans  va     vnl    .fe
+ dges &amp; streaks     .        c ="privacy. dges &amp; streaks     .        c     .fent  r     .fe class="n>        <p>When tdg    .fe class="n>        <p>When the time   es ea    }
+  < ea    }
+    .hero p}
+cl    .hew on  cl ea    U    .herot:   
+  ea    }
+  7 ea    }
+  < ea    }
+    .hero <   }  < ea },    .hero ldcl    .hew     ea    }
+  7 ea    }
+  < ea    }
+    ).forEach(el  < ea    se    .hero     < ea    
 </body>
 </html>
